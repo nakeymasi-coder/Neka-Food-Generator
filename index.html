@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NekaShannell Designs | The Luxe Foodie AI Generator</title>
+  <style>
+    :root{
+      --bg:#0f0f14;
+      --panel:#171821;
+      --panel2:#1f2130;
+      --line:#2b2e40;
+      --text:#f5f1ff;
+      --muted:#bdb6d7;
+      --accent:#ff5fb2;
+      --accent2:#ffc1df;
+      --gold:#f4cd6a;
+      --shadow:0 12px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg,#11121a 0%, #0c0d13 100%);
+      color:var(--text);
+    }
+    .wrap{
+      max-width:1400px;
+      margin:0 auto;
+      padding:22px;
+    }
+    .hero{
+      background:linear-gradient(135deg, rgba(255,95,178,.18), rgba(244,205,106,.08));
+      border:1px solid var(--line);
+      border-radius:26px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      margin-bottom:22px;
+    }
+    h1{
+      margin:0 0 8px;
+      font-size:34px;
+      line-height:1.1;
+    }
+    .sub{
+      color:var(--muted);
+      font-size:15px;
+      max-width:920px;
+      line-height:1.55;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:22px;
+    }
+    .panel{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .panel .inner{padding:18px}
+    .section-title{
+      margin:0 0 14px;
+      font-size:18px;
+      color:#fff;
+      letter-spacing:.2px;
+    }
+    .fields{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+    .field{
+      background:var(--panel2);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px;
+    }
+    .field label{
+      display:block;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.8px;
+      color:var(--accent2);
+      margin-bottom:8px;
+      font-weight:bold;
+    }
+    select, input[type="text"], textarea{
+      width:100%;
+      border:none;
+      outline:none;
+      border-radius:10px;
+      padding:12px;
+      font-size:14px;
+      background:#0f1118;
+      color:var(--text);
+      border:1px solid #303348;
+    }
+    textarea{
+      min-height:320px;
+      resize:vertical;
+      line-height:1.55;
+    }
+    .full{grid-column:1 / -1}
+    .button-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
+    button{
+      border:none;
+      cursor:pointer;
+      padding:12px 16px;
+      border-radius:12px;
+      font-weight:700;
+      color:#15131b;
+      background:linear-gradient(90deg, var(--accent), #ff87c6);
+      box-shadow:var(--shadow);
+    }
+    button.secondary{
+      background:#26293a;
+      color:#fff;
+      border:1px solid #353955;
+    }
+    button.gold{
+      background:linear-gradient(90deg, #f4cd6a, #ffe7a4);
+      color:#1a1710;
+    }
+    .mini{
+      font-size:12px;
+      color:var(--muted);
+      margin-top:8px;
+      line-height:1.5;
+    }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:12px;
+    }
+    .chip{
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:12px;
+      background:#25283a;
+      border:1px solid #353955;
+      color:#f3def0;
+    }
+    .output-tools{
+      display:flex;
+      gap:10px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+    .smart-box{
+      background:#10121a;
+      border:1px dashed #3c4060;
+      border-radius:14px;
+      padding:12px;
+      color:#d5d0e8;
+      font-size:13px;
+      line-height:1.5;
+      margin-top:14px;
+    }
+    .two{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    .small{
+      font-size:12px;
+      color:var(--muted);
+    }
+    @media (max-width: 1050px){
+      .grid{grid-template-columns:1fr}
+    }
+    @media (max-width: 760px){
+      .fields,.two{grid-template-columns:1fr}
+      h1{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>NEKASHANNELL DESIGNS</h1>
+      <h2 style="margin:6px 0 8px; font-size:22px; color:#ffc1df;">The Luxe Foodie AI Generator</h2>
+      <div style="margin-top:4px; font-size:14px; color:#ff5fb2; font-weight:700;">Pretty. Glossy. Paid. 💅🏽✨</div>
+      <div class="sub">
+        Create ultra-glossy glam doll foodie portraits with luxury beauty-editorial styling.
+        This generator is designed for Flow AI, ImageFX, and ChatGPT workflows, letting you customize hairstyles, outfits, food, drinks, poses, jewelry, accessories, shoes, and backgrounds with clean, high-end prompt output.
+      </div>
+      <div class="chips">
+        <div class="chip">Flow AI ready</div>
+        <div class="chip">ImageFX optimized</div>
+        <div class="chip">ChatGPT workflow</div>
+        <div class="chip">Luxury foodie aesthetic</div>
+        <div class="chip">NekaShannell Designs</div>
+      </div>
+    </div>
+    </div>
+
+    <div class="grid">
+      <div class="panel">
+        <div class="inner">
+          <h2 class="section-title">Generator Controls</h2>
+
+          <div class="fields">
+            <div class="field">
+              <label>Skin Tone</label>
+              <select id="skinTone"></select>
+            </div>
+            <div class="field">
+              <label>Face Style</label>
+              <select id="faceStyle"></select>
+            </div>
+
+            <div class="field">
+              <label>Hairstyle</label>
+              <select id="hairstyle"></select>
+            </div>
+            <div class="field">
+              <label>Hair Color</label>
+              <select id="hairColor"></select>
+            </div>
+
+            <div class="field">
+              <label>Eye Color</label>
+              <select id="eyeColor"></select>
+            </div>
+            <div class="field">
+              <label>Lip Color</label>
+              <select id="lipColor"></select>
+            </div>
+
+            <div class="field">
+              <label>Eyeshadow</label>
+              <select id="eyeshadow"></select>
+            </div>
+            <div class="field">
+              <label>Expression</label>
+              <select id="expression"></select>
+            </div>
+
+            <div class="field">
+              <label>Pose</label>
+              <select id="pose"></select>
+            </div>
+            <div class="field">
+              <label>Camera Angle</label>
+              <select id="cameraAngle"></select>
+            </div>
+
+            <div class="field">
+              <label>Top</label>
+              <select id="top"></select>
+            </div>
+            <div class="field">
+              <label>Bottom</label>
+              <select id="bottom"></select>
+            </div>
+
+            <div class="field">
+              <label>Matching Set</label>
+              <select id="set"></select>
+            </div>
+            <div class="field">
+              <label>Shoes</label>
+              <select id="shoes"></select>
+            </div>
+
+            <div class="field">
+              <label>Chinese Food</label>
+              <select id="chineseFood"></select>
+            </div>
+            <div class="field">
+              <label>Other Food</label>
+              <select id="otherFood"></select>
+            </div>
+
+            <div class="field">
+              <label>Drink</label>
+              <select id="drink"></select>
+            </div>
+            <div class="field">
+              <label>Food Action</label>
+              <select id="action"></select>
+            </div>
+
+            <div class="field">
+              <label>Jewelry</label>
+              <select id="jewelry"></select>
+            </div>
+            <div class="field">
+              <label>Accessories</label>
+              <select id="accessory"></select>
+            </div>
+
+            <div class="field">
+              <label>Nails</label>
+              <select id="nails"></select>
+            </div>
+            <div class="field">
+              <label>Background</label>
+              <select id="background"></select>
+            </div>
+
+            <div class="field full">
+              <label>Custom Jewelry Text</label>
+              <input type="text" id="customJewelry" placeholder='Example: heart nameplate necklace reading "NEKA"' />
+            </div>
+
+            <div class="field full">
+              <label>Custom Accessory / Prop</label>
+              <input type="text" id="customAccessory" placeholder="Example: pink rhinestone phone, designer takeout bag, gold iPad" />
+            </div>
+
+            <div class="field full">
+              <label>Custom Outfit Detail</label>
+              <input type="text" id="customOutfit" placeholder="Example: fitted white crop top with light wash jeans and black designer belt" />
+            </div>
+
+            <div class="field full">
+              <label>Custom Food / Drink Detail</label>
+              <input type="text" id="customFoodDetail" placeholder="Example: glossy sauce dripping from the chopsticks, steaming fresh food, sparkling iced tea" />
+            </div>
+
+            <div class="field full">
+              <label>Extra Style Notes</label>
+              <input type="text" id="extraNotes" placeholder="Example: ultra-clean white background, extra glossy lips, luxury restaurant mood" />
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button type="button" onclick="buildPrompt()">Generate Glam Prompt</button>
+            <button type="button" class="gold" onclick="smartMatch()">Auto Style</button>
+            <button type="button" class="secondary" onclick="randomizeSelections()">Surprise Me</button>
+            <button type="button" class="secondary" onclick="resetAll()">Clear All</button>
+          </div>
+
+          <div class="smart-box">
+            <strong>Smart Match:</strong> auto-pairs food with a fitting background and drink vibe. Chinese food will lean restaurant / takeout / clean studio foodie styling. Coffee and boba will lean café scenes. Airport props can be used manually with airport terminal backgrounds.
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="inner">
+          <h2 class="section-title">Generated Prompt</h2>
+          <textarea id="output" placeholder="Your generated prompt will appear here..."></textarea>
+          <div class="output-tools">
+            <button type="button" onclick="copyPrompt()">Copy Prompt</button>
+            <button type="button" class="secondary" onclick="downloadPrompt()">Download .txt</button>
+          </div>
+          <div class="mini">Tip: use either a matching set or a top + bottom combo. If both are selected, the set will be prioritized in the final prompt.</div>
+
+          <div class="smart-box" id="summaryBox">
+            Summary will appear here after you build the prompt.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:18px; text-align:center; font-size:13px; color:#bdb6d7;">
+      © 2026 NekaShannell Designs. All Rights Reserved.
+    </div>
+  </div>
+
+  <script>
+    const optionData = {
+      skinTone: [
+        "deep espresso brown skin",
+        "rich chocolate brown skin",
+        "warm cocoa brown skin",
+        "golden caramel brown skin",
+        "deep bronze brown skin",
+        "radiant mahogany brown skin",
+        "toffee brown skin",
+        "smooth chestnut brown skin",
+        "honey brown skin",
+        "warm amber brown skin",
+        "golden tan brown skin",
+        "soft mocha brown skin",
+        "luminous cinnamon brown skin",
+        "rich pecan brown skin",
+        "deep warm brown skin"
+      ],
+      faceStyle: [
+        "large almond-shaped brown eyes, sculpted brows, dramatic lashes, and glossy full lips",
+        "sharp almond eyes, thick winged liner, fluffy lashes, and plump glassy lips",
+        "soft cat-eye glamour, bold brows, fluttery lashes, and overlined glossy lips",
+        "semi-realistic glam doll features with sculpted cheekbones and pouty lips",
+        "beauty-editorial face with defined brows, bright under-eyes, and glossy lips",
+        "ultra polished glam face with warm blush, sleek nose highlight, and luxe lips",
+        "dramatic beauty look with arched brows, long lashes, and glossy nude lips",
+        "softly contoured face with bold eyes and plush glossy lips",
+        "high-fashion glam doll face with lifted liner and luminous skin",
+        "sleek editorial makeup with dramatic lashes and crisp lip definition",
+        "glamorous feminine features with full lips and sharp eye makeup",
+        "luxury doll-like beauty with smooth airbrushed shading and pouty lips",
+        "clean soft-glam face with winged liner and glassy lips",
+        "sultry beauty portrait features with high shine lips and crisp brows",
+        "flawless baddie makeup with thick lashes and sculpted glamour"
+      ],
+      hairstyle: [
+        "sleek black hair in a high ponytail with blunt china bangs",
+        "sleek high ponytail with face-framing strands",
+        "bone-straight middle-part hair flowing past the waist",
+        "long body-wave side-part hair",
+        "deep wave glam curls",
+        "half-up half-down ponytail with glossy curls",
+        "long neat knotless braids",
+        "super long braided ponytail",
+        "sleek low ponytail with center part",
+        "voluminous glam blowout",
+        "high bun with swoop bang",
+        "claw-clip messy bun with soft tendrils",
+        "shoulder-length blunt bob",
+        "straight hair with flipped ends",
+        "jumbo bubble ponytail"
+      ],
+      hairColor: [
+        "jet black",
+        "soft black",
+        "blue-black shine",
+        "dark chocolate brown",
+        "warm chestnut brown",
+        "auburn red",
+        "burgundy wine",
+        "ginger copper",
+        "honey blonde",
+        "ash brown",
+        "caramel balayage",
+        "black with blonde money pieces",
+        "black with pink streaks",
+        "ombre brown to blonde",
+        "platinum blonde"
+      ],
+      eyeColor: [
+        "warm brown eyes",
+        "deep brown eyes",
+        "honey brown eyes",
+        "hazel brown eyes",
+        "golden brown eyes",
+        "soft amber eyes",
+        "dark mocha eyes",
+        "light brown eyes",
+        "caramel eyes",
+        "rich chestnut eyes",
+        "dark hazel eyes",
+        "warm hazel eyes",
+        "bronze brown eyes",
+        "espresso eyes",
+        "cinnamon brown eyes"
+      ],
+      lipColor: [
+        "glossy pink lips",
+        "glossy nude pink lips",
+        "soft rose gloss lips",
+        "peachy nude gloss lips",
+        "mauve pink glossy lips",
+        "glass-like clear gloss lips",
+        "caramel nude glossy lips",
+        "warm mocha glossy lips",
+        "milky pink glossy lips",
+        "high-shine blush pink lips",
+        "rosy nude lips",
+        "shimmer nude gloss lips",
+        "soft brown nude gloss lips",
+        "pinky beige gloss lips",
+        "glazed peach lips"
+      ],
+      eyeshadow: [
+        "soft nude eyeshadow",
+        "champagne shimmer eyeshadow",
+        "warm brown smokey eyeshadow",
+        "soft pink glam eyeshadow",
+        "rose gold shimmer eyeshadow",
+        "neutral matte glam eyeshadow",
+        "bronze shimmer eyeshadow",
+        "light taupe eyeshadow",
+        "bright inner-corner highlight",
+        "peach champagne glam eyeshadow",
+        "caramel matte blend",
+        "clean soft-glam nude eye look",
+        "warm honey shimmer eyeshadow",
+        "ivory lid highlight",
+        "subtle beige glam eyeshadow"
+      ],
+      expression: [
+        "playfully sticking out her tongue",
+        "smirking confidently",
+        "giving soft glam eye contact",
+        "winking with attitude",
+        "looking sassy and unbothered",
+        "serving a flirty side-eye",
+        "giving a soft pout",
+        "laughing softly",
+        "looking pretty and bored",
+        "serving a bossed-up stare",
+        "looking playful and teasing",
+        "giving a luxurious selfie expression",
+        "serving a confident glam look",
+        "looking sweet but bold",
+        "showing foodie-girl attitude"
+      ],
+      pose: [
+        "holding a food bowl in one hand while lifting food with chopsticks in the other",
+        "bringing a bite of food toward her mouth",
+        "holding her bowl close to her chest in a glam foodie pose",
+        "standing in a slight side angle while eating",
+        "posing with one hand on her hip and food in the other hand",
+        "leaning forward in a playful foodie pose",
+        "holding the drink beside her face while presenting the food bowl",
+        "serving a close-up beauty shot while eating",
+        "sitting casually with food and drink in hand",
+        "walking with a takeout bowl and glam confidence",
+        "looking over her shoulder while holding takeout",
+        "holding chopsticks up near her glossy lips",
+        "bringing noodles toward her mouth in a playful pose",
+        "posing like a luxury food-content creator",
+        "holding the bowl low and glancing down at the food"
+      ],
+      cameraAngle: [
+        "front-facing waist-up portrait",
+        "slightly angled front portrait",
+        "close-up beauty portrait",
+        "mid-shot studio portrait",
+        "slightly above eye level selfie angle",
+        "straight-on editorial angle",
+        "soft side-angle portrait",
+        "three-quarter beauty angle",
+        "slightly low angle for confidence",
+        "vertical social-media portrait framing",
+        "waist-up centered composition",
+        "fashion editorial crop",
+        "slightly zoomed-in foodie portrait",
+        "portrait with focus on face and hands",
+        "balanced front camera composition"
+      ],
+      top: [
+        "white fitted crop top",
+        "ribbed white tank top",
+        "off-shoulder fitted top",
+        "satin blouse",
+        "graphic baby tee",
+        "white bodycon bodysuit",
+        "cropped hoodie",
+        "lace top",
+        "corset top",
+        "silk cami top",
+        "knit crop sweater",
+        "zip-up fitted jacket",
+        "halter crop top",
+        "denim vest top",
+        "designer-inspired logo tee"
+      ],
+      bottom: [
+        "high-waisted light wash jeans",
+        "ripped skinny jeans",
+        "high-waisted dark jeans",
+        "mini skirt",
+        "black leather pants",
+        "cargo pants",
+        "biker shorts",
+        "wide-leg trousers",
+        "fitted pencil skirt",
+        "stacked jeans",
+        "flare pants",
+        "denim shorts",
+        "joggers",
+        "satin mini skirt",
+        "ribbed fitted skirt"
+      ],
+      set: [
+        "",
+        "matching lounge set",
+        "velour tracksuit",
+        "two-piece skirt set",
+        "athleisure set",
+        "ribbed matching set",
+        "luxury knit set",
+        "satin two-piece set",
+        "streetwear coordinated set",
+        "bodycon set",
+        "zip-up sporty set",
+        "cozy pajama set",
+        "denim two-piece set",
+        "crop hoodie and jogger set",
+        "soft neutral knit set",
+        "glam casual two-piece set"
+      ],
+      shoes: [
+        "clear heels",
+        "nude strappy heels",
+        "white sneakers",
+        "designer-inspired heels",
+        "chunky sneakers",
+        "slides",
+        "heeled boots",
+        "platform heels",
+        "combat boots",
+        "thigh-high boots",
+        "ankle boots",
+        "glam sandals",
+        "crocs glam style",
+        "white Air Force style sneakers",
+        "pointed-toe heels"
+      ],
+      chineseFood: [
+        "",
+        "Mongolian beef over rice",
+        "orange chicken over rice",
+        "General Tso's chicken over rice",
+        "beef and broccoli over rice",
+        "lo mein noodles",
+        "chow mein noodles",
+        "sesame chicken over rice",
+        "kung pao chicken over rice",
+        "teriyaki chicken over rice",
+        "shrimp fried rice",
+        "chicken fried rice",
+        "dumplings",
+        "egg rolls",
+        "spring rolls",
+        "sweet and sour chicken over rice"
+      ],
+      otherFood: [
+        "",
+        "cheeseburger and fries",
+        "pizza slice",
+        "pancakes with syrup",
+        "waffles with fruit",
+        "chicken wings",
+        "tacos",
+        "sushi rolls",
+        "seafood boil",
+        "steak plate",
+        "spaghetti",
+        "mac and cheese",
+        "donuts",
+        "ice cream",
+        "hot dog",
+        "loaded fries"
+      ],
+      drink: [
+        "iced coffee",
+        "boba tea",
+        "pink lemonade",
+        "milkshake",
+        "smoothie",
+        "soda can",
+        "matcha latte",
+        "water bottle",
+        "frappuccino",
+        "juice bottle",
+        "tea cup",
+        "energy drink",
+        "cocktail glass",
+        "sparkling soda",
+        "iced tea"
+      ],
+      action: [
+        "lifting a bite of food with chopsticks",
+        "bringing a saucy bite toward her glossy lips",
+        "holding the bowl close while posing pretty",
+        "showing off her food like a content creator",
+        "taking a playful bite",
+        "posing with her meal in a glam foodie moment",
+        "holding the drink while presenting the food",
+        "serving beauty-editorial food girl energy",
+        "capturing a stylish takeout moment",
+        "playing with the chopsticks while posing",
+        "holding her meal in a luxe casual way",
+        "showing a close-up foodie pose",
+        "posing like a trendy restaurant selfie",
+        "serving glam takeout girl vibes",
+        "showing off the meal with confident attitude"
+      ],
+      jewelry: [
+        "gold heart earrings, layered gold necklace, and a bracelet",
+        "large gold hoop earrings, layered chains, and gold bangles",
+        "heart-shaped earrings, heart pendant necklace, and stacked bracelets",
+        "diamond studs, tennis bracelet, and a delicate necklace",
+        "gold door-knocker earrings, rings, and a chain necklace",
+        "chunky hoop earrings, watch, and layered bracelets",
+        "gold studs, charm bracelet, and a pendant necklace",
+        "luxury logo earrings, chain bracelet, and rings",
+        "cross necklace, hoop earrings, and a bangle",
+        "pearl studs mixed with gold layered jewelry",
+        "double necklaces, statement rings, and gold cuffs",
+        "heart jewelry set with bracelets",
+        "diamond choker and matching bracelet",
+        "gold anklet, bracelet, and hoop earrings",
+        "sleek minimalist gold jewelry"
+      ],
+      accessory: [
+        "designer handbag",
+        "mini purse",
+        "sunglasses",
+        "phone",
+        "pink phone case",
+        "gold iPad",
+        "planner",
+        "notebook",
+        "lip gloss",
+        "makeup compact",
+        "shopping bags",
+        "passport",
+        "boarding pass",
+        "takeout bag",
+        "mirror compact"
+      ],
+      nails: [
+        "glossy nude pink almond nails",
+        "baby pink square acrylic nails",
+        "French tip acrylic nails",
+        "long coffin nude nails",
+        "white almond nails",
+        "chrome nails",
+        "glitter nude nails",
+        "soft ombre pink nails",
+        "rhinestone nails",
+        "marble nails",
+        "red glossy acrylic nails",
+        "designer-inspired nails",
+        "short glossy natural nails",
+        "milky white acrylic nails",
+        "soft blush nude nails"
+      ],
+      background: [
+        "clean white studio background",
+        "soft gray studio background",
+        "luxury restaurant background",
+        "Chinese takeout restaurant background",
+        "modern café background",
+        "city night lights background",
+        "pink glam room background",
+        "luxury kitchen background",
+        "content creator studio background",
+        "minimal beige backdrop",
+        "neon sign wall background",
+        "marble wall background",
+        "urban streetwear wall background",
+        "airport terminal background",
+        "soft blurred restaurant background"
+      ]
+    };
+
+    function fillSelect(id, items){
+      const el = document.getElementById(id);
+      el.innerHTML = `<option value="">None</option>` + items.map(item => `<option value="${escapeHtml(item)}">${item}</option>`).join("");
+    }
+
+    function escapeHtml(str){
+      return String(str)
+        .replaceAll("&","&amp;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;");
+    }
+
+    Object.keys(optionData).forEach(id => fillSelect(id, optionData[id]));
+
+    function val(id){
+      return document.getElementById(id).value.trim();
+    }
+
+    function chooseFood(){
+      const chinese = val("chineseFood");
+      const other = val("otherFood");
+      if (chinese) return {food: chinese, cuisine: "chinese"};
+      if (other) return {food: other, cuisine: "other"};
+      return {food: "Mongolian beef over rice", cuisine: "chinese"};
+    }
+
+    function buildOutfit(){
+      const set = val("set");
+      const top = val("top");
+      const bottom = val("bottom");
+      const customOutfit = val("customOutfit");
+      let outfit = set ? `a ${set}` : `${top} paired with ${bottom}`;
+      if(customOutfit) outfit += `, ${customOutfit}`;
+      return outfit;
+    }
+
+    function autoFoodDetail(foodObj, drink){
+      const map = {
+        "Mongolian beef over rice":"savory Mongolian beef glazed in rich glossy sauce served over fluffy white rice",
+        "orange chicken over rice":"crispy orange chicken coated in a glossy citrus glaze over white rice",
+        "General Tso's chicken over rice":"crispy General Tso's chicken with bold glossy sauce over rice",
+        "beef and broccoli over rice":"tender beef and broccoli in a glossy savory sauce over rice",
+        "lo mein noodles":"glossy lo mein noodles with rich sauce and a steaming fresh finish",
+        "chow mein noodles":"savory chow mein noodles with glossy sauce and fresh vegetables",
+        "sesame chicken over rice":"sesame chicken coated in sticky glossy sauce over white rice",
+        "kung pao chicken over rice":"kung pao chicken in a rich spicy glaze over rice",
+        "teriyaki chicken over rice":"teriyaki chicken with shiny sauce over fluffy rice",
+        "shrimp fried rice":"savory shrimp fried rice with glossy highlights and steam",
+        "chicken fried rice":"chicken fried rice with rich texture and steam",
+        "dumplings":"steaming dumplings with glossy texture and a luxe food editorial finish",
+        "egg rolls":"crispy egg rolls with golden texture and stylish plating",
+        "spring rolls":"light golden spring rolls with fresh glossy detail",
+        "sweet and sour chicken over rice":"sweet and sour chicken with a shiny rich glaze over rice",
+        "cheeseburger and fries":"a juicy cheeseburger with glossy melted cheese and golden fries",
+        "pizza slice":"a cheesy pizza slice with glossy sauce and melty detail",
+        "pancakes with syrup":"stacked pancakes with dripping syrup and glossy butter detail",
+        "waffles with fruit":"golden waffles topped with fresh fruit and glossy syrup",
+        "chicken wings":"saucy chicken wings with glossy glaze and bold texture",
+        "tacos":"loaded tacos with fresh toppings and vibrant detail",
+        "sushi rolls":"beautiful sushi rolls with polished food styling",
+        "seafood boil":"a luxe seafood boil with rich seasoning and glossy texture",
+        "steak plate":"a juicy steak plate with glossy finish and rich savory detail",
+        "spaghetti":"twirled spaghetti with glossy sauce and rich texture",
+        "mac and cheese":"creamy mac and cheese with a glossy cheesy finish",
+        "donuts":"sweet glossy donuts with polished icing detail",
+        "ice cream":"creamy ice cream with glossy highlights and soft texture",
+        "hot dog":"a loaded hot dog with glossy toppings and vibrant detail",
+        "loaded fries":"crispy loaded fries topped with glossy sauce and rich detail"
+      };
+      const foodText = map[foodObj.food] || `beautifully styled ${foodObj.food} with glossy food-editorial detail`;
+      return `${foodText}, paired with ${drink}`;
+    }
+
+    function smartMatch(){
+      const foodObj = chooseFood();
+      const drink = val("drink");
+      const bg = document.getElementById("background");
+      const accessory = document.getElementById("accessory");
+
+      if(foodObj.cuisine === "chinese"){
+        const chineseBackgrounds = [
+          "Chinese takeout restaurant background",
+          "luxury restaurant background",
+          "soft blurred restaurant background",
+          "clean white studio background"
+        ];
+        bg.value = chineseBackgrounds[Math.floor(Math.random() * chineseBackgrounds.length)];
+        if(!drink || drink === "water bottle"){
+          document.getElementById("drink").value = "boba tea";
+        }
+        if(!val("accessory") || val("accessory") === "mirror compact"){
+          accessory.value = "takeout bag";
+        }
+      } else {
+        const cafeFoods = ["iced coffee","matcha latte","frappuccino","tea cup","boba tea"];
+        if(cafeFoods.includes(drink)){
+          bg.value = "modern café background";
+        } else {
+          bg.value = "clean white studio background";
+        }
+      }
+      buildPrompt();
+    }
+
+    function buildPrompt(){
+      const foodObj = chooseFood();
+      const customFoodDetail = val("customFoodDetail");
+      const drink = val("drink");
+      const customJewelry = val("customJewelry");
+      const customAccessory = val("customAccessory");
+      const extraNotes = val("extraNotes");
+      const accessory = val("accessory");
+      const jewelry = val("jewelry");
+      const finalJewelry = customJewelry ? `${jewelry}, plus ${customJewelry}` : jewelry;
+      const finalAccessory = customAccessory ? `${accessory}, plus ${customAccessory}` : accessory;
+      const outfit = buildOutfit();
+      const foodDetail = autoFoodDetail(foodObj, drink);
+      const extraFood = customFoodDetail ? `, ${customFoodDetail}` : "";
+
+      const prompt = `Hyper-glossy digital airbrush 4K luxury semi-realistic digital illustration of a glamorous African American woman with ${val("skinTone")} and a flawless beauty-editorial glass-skin finish. She has ${val("faceStyle")}, ${val("eyeColor")}, ${val("eyeshadow")}, and ${val("lipColor")}. Her hair is styled in ${val("hairstyle")} in ${val("hairColor")} with sleek laid edges and ultra-gloss shine. She is ${val("expression")}.
+
+Pose: ${val("pose")}. Camera angle: ${val("cameraAngle")}. Action: she is ${val("action")} while holding ${foodObj.food} and ${drink}.
+
+Outfit: ${outfit}. Shoes: ${val("shoes")}. Jewelry: ${finalJewelry}. Accessories / props: ${finalAccessory}. Nails: ${val("nails")}.
+
+Food detail: ${foodDetail}${extraFood}. Background: ${val("background")}.
+
+Art style: hyper-polished Bratz-inspired glam doll, semi-realistic luxury beauty illustration, ultra-smooth airbrushed shading, glossy lips, bold lashes, sharp details, rich contrast, clean polished finish, social-media-ready vertical composition.${extraNotes ? " Extra notes: " + extraNotes + "." : ""}`;
+
+      document.getElementById("output").value = prompt;
+
+      document.getElementById("summaryBox").innerHTML = `
+        <strong>Quick Summary</strong><br>
+        Hair: ${val("hairstyle")}<br>
+        Outfit: ${outfit}<br>
+        Food: ${foodObj.food}<br>
+        Drink: ${drink}<br>
+        Background: ${val("background")}<br>
+        Mood: ${val("expression")}
+      `;
+    }
+
+    function copyPrompt(){
+      const out = document.getElementById("output");
+      out.select();
+      out.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(out.value).then(() => {
+        alert("Prompt copied.");
+      }).catch(() => {
+        alert("Copy failed. Please copy manually.");
+      });
+    }
+
+    function downloadPrompt(){
+      const text = document.getElementById("output").value || "Build a prompt first.";
+      const blob = new Blob([text], {type:"text/plain"});
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "luxe-foodie-glam-prompt.txt";
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    function resetAll(){
+      Object.keys(optionData).forEach(id => {
+        const el = document.getElementById(id);
+        if(el) el.selectedIndex = 0;
+      });
+      ["customJewelry","customAccessory","customOutfit","customFoodDetail","extraNotes"].forEach(id => {
+        document.getElementById(id).value = "";
+      });
+      document.getElementById("output").value = "";
+      document.getElementById("summaryBox").textContent = "Summary will appear here after you build the prompt.";
+    }
+
+    function randomItem(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+
+    function randomizeSelections(){
+      Object.keys(optionData).forEach(id => {
+        const el = document.getElementById(id);
+        const opts = optionData[id];
+        if(!el || !opts || !opts.length) return;
+        let pick = randomItem(opts);
+        if(id === "set" || id === "chineseFood" || id === "otherFood"){
+          // keep these biased for usable combos
+          pick = randomItem(opts.slice(1));
+        }
+        el.value = pick;
+      });
+
+      // Prefer one food path at a time
+      if(Math.random() > 0.5){
+        document.getElementById("otherFood").value = "";
+      } else {
+        document.getElementById("chineseFood").value = "";
+      }
+
+      // Sometimes no matching set so top+bottom can show
+      if(Math.random() > 0.5){
+        document.getElementById("set").value = "";
+      }
+
+      smartMatch();
+    }
+
+    buildPrompt();
+  </script>
+</body>
+</html>
